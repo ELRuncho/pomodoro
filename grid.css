@@ -1,0 +1,25 @@
+.main{
+	display: grid;
+	grid-template: repeat(5,1fr)/repeat(3,1fr);
+}
+.title{
+	grid-column: 2/3;
+	grid-row: 2/3;
+}
+.dials{
+	grid-column: 2/3;
+	grid-row: 3/4;
+	display: grid;
+	grid-template-columns: repeat(2,1fr);
+}
+.Clock{
+	grid-column: 2/3;
+	grid-row: 4/5;
+}
+
+#Break{
+	grid-column: 1/2;
+}
+#Session{
+	grid-column: 2/3;
+}
