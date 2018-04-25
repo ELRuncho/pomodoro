@@ -1,0 +1,15 @@
+.main{
+	background-color: grey;
+}
+.title h1{
+	color: white;
+	font-size: 2em;
+	font-family: Helvetica, sans-serif;
+	text-align: center;
+}
+.dials h2{
+	color: white;
+	font-size: 1em;
+	font-family: Helvetica, sans-serif;
+	text-align: center;
+}
