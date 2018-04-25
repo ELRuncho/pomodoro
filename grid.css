@@ -10,7 +10,7 @@
 	grid-column: 2/3;
 	grid-row: 3/4;
 	display: grid;
-	grid-template-columns: repeat(2,1fr);
+	grid-template: repeat(2,1fr)/repeat(2,1fr);
 }
 .Clock{
 	grid-column: 2/3;
@@ -19,7 +19,30 @@
 
 #Break{
 	grid-column: 1/2;
+	grid-row: 1/2
 }
 #Session{
 	grid-column: 2/3;
+	grid-row: 1/2;
+}
+#bDial{
+	grid-column: 1/2;
+	grid-row: 2/3;
+	display: grid;
+	grid-template-columns: repeat(3,1fr);
+}
+#sDial{
+	grid-column: 2/3;
+	grid-row:2/3;
+	display: grid;
+	grid-template-columns: repeat(3,1fr);
+}
+.Minus{
+	grid-column: 1/2;
+}
+.Number{
+	grid-column: 2/3;
+}
+.Plus{
+	grid-column: 3/4;
 }
