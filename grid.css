@@ -1,6 +1,6 @@
 body{
 	display: grid;
-	grid-template: repeat(5,1fr)/repeat(3,1fr);
+	grid-template: 40px 0.2fr 0.4fr 5fr 20px/ 1fr 3fr 1fr;
 }
 .title{
 	grid-column: 2/3;
@@ -16,7 +16,8 @@ body{
 	grid-column: 2/3;
 	grid-row: 4/5;
 	display: grid;
-	grid-template:repeat(3,1fr)/repeat(3,1fr);
+	grid-template: 0.1fr 300px 0.2fr/0.2fr 300px 0.2fr;
+	margin-left: 21%;
 }
 
 #Break{
@@ -31,13 +32,13 @@ body{
 	grid-column: 1/2;
 	grid-row: 2/3;
 	display: grid;
-	grid-template-columns: repeat(3,1fr);
+	grid-template-columns: 1fr 0.5fr 1fr;
 }
 #sDial{
 	grid-column: 2/3;
 	grid-row:2/3;
 	display: grid;
-	grid-template-columns: repeat(3,1fr);
+	grid-template-columns: 1fr 0.5fr 1fr;
 }
 .Minus{
 	grid-column: 1/2;
@@ -48,15 +49,15 @@ body{
 .Plus{
 	grid-column: 3/4;
 }
-#Face{
-	grid-column: 2/3;
-	grid-row: 2/3;
-	display: grid;
-	grid-template-rows: 1fr 1fr;
-}
 #start{
 	grid-row: 1/2;
 }
 #timer{
 	grid-row: 2/3;
+}
+#face{
+	grid-row: 2/3;
+	grid-column: 2/3;
+	display: grid;
+	grid-template-rows: 1fr 1fr;
 }
