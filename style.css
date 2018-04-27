@@ -9,10 +9,9 @@ body{
 }
 .dials h2{
 	color: black;
-	font-size: 0.99em;
+	font-size: 1.3em;
 	font-family: 'Cardo', sans-serif;
 	text-align: center;
-
 }
 .button {
 	width: 45px;
@@ -74,4 +73,36 @@ body{
 #plusS:hover::before{
 	background-color: #c6f0f8;
 }
-.Minus{}
+.Number{
+	height: 50px;
+}
+.Minus{
+	margin: auto 10px auto auto;
+}
+.Plus{
+	margin: auto auto auto 10px;
+}
+#face{
+	background-color: #eaeaea;
+	border-radius:50%; 
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#f6f6f6), to(#eaeaea));
+	background-image: -webkit-linear-gradient(top, #f6f6f6, #eaeaea);
+	background-image: -moz-linear-gradient(top, #f6f6f6, #eaeaea); 
+	background-image: -ms-linear-gradient(top, #f6f6f6, #eaeaea); 
+	background-image: -o-linear-gradient(top, #f6f6f6, #eaeaea);
+	background-image: linear-gradient(top, #f6f6f6, #eaeaea);
+	box-shadow: 0 0px 6px rgba(0,0,0,.25), 0 2px 3px rgba(0,0,0,.1);
+}
+
+#start h2{
+	text-align:center;
+	padding-top: 12%;
+	font-family: 'Cardo', sans-serif;
+	font-size: 2em;
+}
+#timer h2{
+	text-align:center;
+	font-family: 'Cardo', sans-serif;
+	font-size: 2.2em; 
+	padding-bottom: 21%;
+}
