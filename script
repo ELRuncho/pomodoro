@@ -1,0 +1,26 @@
+var breakTime=0, sesionTime=0;
+
+function sesionPlus(){
+	var sesionValue=document.getElementById("sesionValue");
+	sesionTime++;
+	sesionValue.innerHTML=sesionTime
+}
+function sesionMinus(){
+	var sesionValue=document.getElementById("sesionValue");
+	sesionTime--;
+	sesionValue.innerHTML=sesionTime;
+}
+function breakPlus(){
+	var breakValue=document.getElementById("breakValue");
+	breakTime++;
+	breakValue.innerHTML=breakTime;
+}
+function breakMinus(){
+	var breakValue=document.getElementById("breakValue");
+	breakTime--;
+	breakValue.innerHTML=breakTime;
+}
+
+function startCount(){
+
+}
