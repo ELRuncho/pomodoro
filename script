@@ -7,8 +7,12 @@ function sesionPlus(){
 }
 function sesionMinus(){
 	var sesionValue=document.getElementById("sesionValue");
-	sesionTime--;
-	sesionValue.innerHTML=sesionTime;
+	if (sesionTime===0) {
+		sesionValue.innerHTML=sesionTime
+	}else if (sesionTime>0) {
+		sesionTime--;
+		sesionValue.innerHTML=sesionTime;
+	}
 }
 function breakPlus(){
 	var breakValue=document.getElementById("breakValue");
@@ -17,8 +21,13 @@ function breakPlus(){
 }
 function breakMinus(){
 	var breakValue=document.getElementById("breakValue");
-	breakTime--;
-	breakValue.innerHTML=breakTime;
+	if (breakTime===0) {
+		breakValue.innerHTML=breakTime;
+	}else if (breakTime>0) {
+		breakTime--;
+		breakValue.innerHTML=breakTime;
+	}
+	
 }
 
 function startCount(){
