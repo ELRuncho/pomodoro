@@ -30,6 +30,51 @@ function breakMinus(){
 	
 }
 
-function startCount(){
+function sesionTimer(duration, display){
+	var  timer=duration,minutes, seconds;
+	var rolling=setInterval(function (){
+		minutes=parseInt(timer/60, 10);
+		seconds=parseInt(timer%60, 10);
+		
+		minutes=minutes<10 ? "0" + minutes : minutes;
+		seconds=seconds<10 ? "0" + seconds : seconds;
 
+		display.innerHTML = minutes + ":" + seconds;
+
+		if (--timer<0) {
+			clearInterval(rolling);
+		}
+	},1000);
+	return;
+}
+
+function breakTimer(duration, display){
+	var  timer=duration,minutes, seconds;
+	var rolling=setInterval(function (){
+		minutes=parseInt(timer/60, 10);
+		seconds=parseInt(timer%60, 10);
+		
+		minutes=minutes<10 ? "0" + minutes : minutes;
+		seconds=seconds<10 ? "0" + seconds : seconds;
+
+		display.innerHTML = minutes + ":" + seconds;
+
+		if (--timer<0) {
+			clearInterval(rolling);
+		}
+		/*console.log(timer);*/
+	},1000);
+}
+function startBreak(breakMin){
+	var display=document.querySelector("#timer2");
+	breakTimer(breakMin, display);
+}
+
+function setCounter(){
+	var sesionMin=sesionTime *60;
+	var breakMin=breakTime*60,
+	display=document.querySelector("#timer2");
+	sesionTimer(sesionMin,display);
+	startBreak(breakMin)
+	
 }
