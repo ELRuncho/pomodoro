@@ -1,6 +1,6 @@
 body{
 	display: grid;
-	grid-template: 40px 0.2fr 0.4fr 5fr 20px/ 1fr 3fr 1fr;
+	grid-template: 10px 0.2fr 0.4fr 5fr 20px/ 1fr 3fr 1fr;
 }
 .title{
 	grid-column: 2/3;
@@ -18,6 +18,7 @@ body{
 	display: grid;
 	grid-template: 0.1fr 300px 0.2fr/0.2fr 300px 0.2fr;
 	margin-left: 21%;
+
 }
 
 #Break{
@@ -60,4 +61,10 @@ body{
 	grid-column: 2/3;
 	display: grid;
 	grid-template-rows: 1fr 1fr;
+}
+#reset{
+	grid-row: 3/4;
+	grid-column: 2/3;
+	justify-content: center;
+	align-content: center;
 }
