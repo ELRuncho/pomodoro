@@ -1,4 +1,4 @@
-var breakTime=0, sesionTime=0;
+var breakTime=0, sesionTime=0, dom=document.querySelector(':root');
 
 function sesionPlus(){
 	var sesionValue=document.getElementById("sesionValue");
@@ -40,16 +40,17 @@ function sesionTimer(duration, display){
 		seconds=seconds<10 ? "0" + seconds : seconds;
 
 		display.innerHTML = minutes + ":" + seconds;
-
+		console.log("in sesion");
 		if (--timer<0) {
 			clearInterval(rolling);
 		}
 	},1000);
-	return;
 }
 
 function breakTimer(duration, display){
-	var  timer=duration,minutes, seconds;
+	var  timer=duration,minutes, seconds, display2=document.getElementById("timerTitle");
+	display2.innerHTML="Break Time";
+	dom.style.setProperty('--animTime', duration);
 	var rolling=setInterval(function (){
 		minutes=parseInt(timer/60, 10);
 		seconds=parseInt(timer%60, 10);
@@ -62,19 +63,31 @@ function breakTimer(duration, display){
 		if (--timer<0) {
 			clearInterval(rolling);
 		}
-		/*console.log(timer);*/
+
 	},1000);
-}
-function startBreak(breakMin){
-	var display=document.querySelector("#timer2");
-	breakTimer(breakMin, display);
+	console.log("in break");
 }
 
 function setCounter(){
-	var sesionMin=sesionTime *60;
-	var breakMin=breakTime*60,
+	var sesion=sesionTime*60, recess=breakTime*60,delay=sesion*1000;
 	display=document.querySelector("#timer2");
-	sesionTimer(sesionMin,display);
-	startBreak(breakMin)
+	sesionTimer(sesion,display)
+	setTimeout(breakTimer,delay,recess,display);
+}
+
+function reset(){
+	breakTime=0;
+	sesionTime=0;
+	var breakValue=document.getElementById("breakValue"), sesionValue=document.getElementById("sesionValue"), display=document.querySelector("#timer2");;
+	breakValue.innerHTML  = 0;
+	sesionValue.innerHTML = 0;
+	var killId=setTimeout(function(){
+		for (var i = killId ; i > 0; i--) {clearInterval(i);
+		}
+		display.innerHTML =  "00:00";
+		if (display.innerHTML== "00:00") {
+			clearInterval(killId);
+		}
+	},1000);
 	
 }
